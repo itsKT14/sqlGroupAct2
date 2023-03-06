@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { deleteUserById } from "../../service/api";
 
 const Card = (props) => {
+
+    const handleSubmit = async (e) =>{
+        const id = e.target.name;
+        await deleteUserById(id);
+    }
+
     return (
         <div className="card cardsize mb-3">
             <img src={props.pic} className="card-img-top"/>
@@ -15,7 +22,7 @@ const Card = (props) => {
                     <Link className="btn btn-success my-1" to={`/users/edit/${props.userId}`}>
                         Edit
                     </Link>
-                    <button className="btn btn-danger my-1">
+                    <button className="btn btn-danger my-1" name={props.userId} onClick={(e)=> handleSubmit(e)}>
                         Delete
                     </button>
                 </div>
