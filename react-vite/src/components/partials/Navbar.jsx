@@ -23,8 +23,13 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={"/test"} className="nav-link">
-                            Test  
+                            <Link to={"/posts"} className="nav-link">
+                            Posts  
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={"/comments"} className="nav-link">
+                            Comments  
                             </Link>
                         </li>
                     </ul>

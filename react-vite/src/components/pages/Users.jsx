@@ -5,7 +5,7 @@ import Navbar from '../partials/Navbar';
 import Card from '../partials/Card';
 import ModalCreateUser from '../partials/ModalCreateUser';
 
-export default function Home() {
+export default function Users() {
     TabTitle('Users');
     const [users, setUsers] = useState([]);
     const [searchName, setSearchName] = useState('');
